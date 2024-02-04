@@ -1,9 +1,7 @@
 import { IoClose } from "react-icons/io5";
 import { FaArrowRightArrowLeft, FaPercent } from "react-icons/fa6";
-const InputBar = ({onInputChange, rollClicked, handleRollClick}) => {
+const InputBar = ({onInputChange, rollClicked, handleRollClick, inputs}) => {
   
-  
-
   return (
     <div className="w-full flex items-center justify-between gap-4 mt-5">
       <div className="w-full">
@@ -26,7 +24,7 @@ const InputBar = ({onInputChange, rollClicked, handleRollClick}) => {
         </div>
       </div>
       <div className="w-full">
-        <label  className="font-medium text-gray-800 "  htmlFor="">{rollClicked ? "Roll Over" :"Roll Under"}</label>
+        <label  className="font-medium text-gray-800 "  htmlFor="">{rollClicked ? "Roll Under" :"Roll Over"}</label>
         <div className="long-input flex justify-between items-center border-2 mt-2 shadow-lg border-gray-800  ">
           <input
             className="w-full font-semibold outline-none px-1 border-none  remove-arrow"
@@ -35,6 +33,7 @@ const InputBar = ({onInputChange, rollClicked, handleRollClick}) => {
             id=""
             onChange={(e)=>onInputChange('rolloverInput', e.target.value)}
             min={5}
+            value={inputs.rolloverInput}
             defaultValue={50}
             max={99}
           />
