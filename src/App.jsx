@@ -23,11 +23,17 @@ function App() {
   };
   const handleRollClick = () => {
     setRollClicked(!rollClicked);
+    
+      setInputs((prevInputs) => ({
+        ...prevInputs,
+        rolloverInput: 100 - inputs.rolloverInput,
+      }));
+    
   };
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <div className="w-2/3 h-full flex flex-col gap-14">
-        <div className="py-12 px-2 h-20 w-full bg-gray-600 shadow-show relative rounded-md">
+        <div className="py-12 px-2 h-20 w-full bg-gray-950 shadow-show relative rounded-md">
           <ColoredBox
             rollClicked={rollClicked}
             inputs={inputs}

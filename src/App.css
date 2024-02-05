@@ -9,6 +9,6 @@
   margin: 0;
 }
 .shadow-show{
-  box-shadow:'0 0 10px rgb(240, 179, 179)';
-  color: rgb(240, 179, 179);
+  box-shadow:'0 0 10px 0px white';
+  
 }

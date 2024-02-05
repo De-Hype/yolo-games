@@ -15,11 +15,11 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
   };
 
   return (
-    <div className="bg-gray-600  ">
-      <h3 className="font-bold text-white bg-gray-600 mb-3 text-2xl text-center">
+    <div className="bg-gray-950 ">
+      <h3  className={`font-bold text-white bg-gray-950 mb-3 text-2xl text-center ${value <= 0 || undefined || NaN ? 'invisible':'visible'  }`}>
         {value}
       </h3>
-      <div className="bg-gray-600 absolute right-0 left-0 px-2">
+      <div className="bg-gray-950 absolute right-0 left-0 px-2">
         <div className="relative ">
           <input
             type="range"
@@ -42,11 +42,11 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
             ></div>
           </div>
 
-          <div className="flex items-center bg-gray-600 justify-between ">
-            <h3 className="ml-3 bg-gray-600 font-semibold">
+          <div className="flex items-center bg-gray-950 justify-between ">
+            <h3 className="ml-3 bg-gray-950 font-semibold">
               {rollClicked ? 5 : 0.1}
             </h3>
-            <h3 className="mr-3 bg-gray-600 font-semibold">
+            <h3 className="mr-3 bg-gray-950 font-semibold">
               {rollClicked ? 99.9 : 95}
             </h3>
           </div>
