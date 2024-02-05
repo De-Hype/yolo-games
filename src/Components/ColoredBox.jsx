@@ -1,26 +1,47 @@
 // import Draggable from "react-draggable";
 const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
     let value;
+    let ShowedValue;
+
     if (inputs.rolloverInput>99){
-        value = 99
+        value = 95
+        ShowedValue = value
+    } else if(inputs.rolloverInput<5){
+
+        value=5;
+        ShowedValue = value
+        // onInputChange("rolloverInput", 5)
     } else{
-        value= inputs.rolloverInput;
+        value = inputs.rolloverInput;
     }
+    
+    if ( value <= 95 ){
+        
+        ShowedValue = value
+    }
+    
   const customStyles = {
-    width: `${value}%`,
+    width: `${ShowedValue}%`,
   };
   const inputStyles = {
     width: `100%`,
     cursor: `grab`,
   };
+  const movingStyles ={
+    right:`-${ShowedValue}%`,
+    left:`${ShowedValue}%`,
+    top:`-36px`
+  }
 
   return (
     <div className="bg-gray-950 ">
-      <h3  className={`font-bold text-white bg-gray-950 mb-3 text-2xl text-center ${value <= 0 || undefined || NaN ? 'invisible':'visible'  }`}>
-        {value}
-      </h3>
+
       <div className="bg-gray-950 absolute right-0 left-0 px-2">
-        <div className="relative ">
+      
+        <div className="relative bg-gray-950">
+        <h3  style={movingStyles} className={`font-bold text-white bg-gray-950 absolute  mb-3 text-2xl  ${value <= 0 || undefined || NaN ? 'invisible':'visible'  }`}>
+        {ShowedValue}
+      </h3>
           <input
             type="range"
             className="absolute opacity-0"
@@ -44,10 +65,10 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
 
           <div className="flex items-center bg-gray-950 justify-between ">
             <h3 className="ml-3 bg-gray-950 font-semibold">
-              {rollClicked ? 5 : 0.1}
+              {rollClicked ? 0.1 : 5}
             </h3>
             <h3 className="mr-3 bg-gray-950 font-semibold">
-              {rollClicked ? 99.9 : 95}
+              {rollClicked ? 95 : 99.9}
             </h3>
           </div>
         </div>
