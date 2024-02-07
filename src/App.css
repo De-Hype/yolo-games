@@ -10,5 +10,32 @@
 }
 .shadow-show{
   box-shadow:'0 0 10px 0px white';
-  
 }
+.red{
+  background-color: rgb(26, 9, 9);
+}
+.glowing_effect{
+  /* animation:'200ms linear infinite';
+  animation-name: animate;
+  animation-duration: 3000ms; */
+  /* background-color:red; */
+  box-shadow:0 0 10px rgb(26, 9, 9), 
+  0 0 20px rgb(26, 9, 9),
+  0 0 40px rgb(26, 9, 9),
+  0 0 60px rgb(26, 9, 9),
+  0 0 80px red
+}
+/* @keyframes animate{
+  0%{
+      background-color:rgb(240, 132, 132);
+  }
+
+ 100%{
+      background-color:red;
+      box-shadow:0 0 10px red, 
+      0 0 20px red,
+      0 0 40px red,
+      0 0 60px red,
+      0 0 80px red
+  }
+} */
