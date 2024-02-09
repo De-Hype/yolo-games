@@ -37,7 +37,7 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
     width: `100%`,
     cursor: `grab`,
   };
-  let slidingValue = ShowedValue -3
+  let slidingValue = ShowedValue -3;
   const movingStyles = {
     right: `-${slidingValue}% `,
     left: `${slidingValue}%`,
@@ -54,7 +54,7 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
         <div className="relative ">
           <h3
             style={movingStyles}
-            className={` z font-bold w-7 red  text-white overflow-x-hidden absolute  mb-3 text-2xl  ${
+            className={` z font-bold w-7 red  text-white overflow-x-hidden absolute  mb-3   ${
               value <= 0 || undefined || NaN ? "invisible" : "visible"
             }`}
           >
