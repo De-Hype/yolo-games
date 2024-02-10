@@ -1,6 +1,6 @@
-*{
+ *{
   background-color: black;
-}
+} 
 .long-input{
   min-width: 50%;
 }
@@ -11,8 +11,27 @@
 .shadow-show{
   box-shadow:'0 0 10px 0px white';
 }
+.box-width{
+  width:80vw;
+}
+.range{
+ 
+  height:2rem;
+  /* overflow: hidden; */
+  display:flex;
+  cursor:grab;
+}
 .red{
-  background-color: rgb(26, 9, 9);
+  
+  /* background-color: red; */
+  height: 100%;
+  box-shadow: 0 0 3rem rgba(225, 0, 0, .8);
+}
+.lime{
+
+  /* background-color: lime; */
+  height: 100%;
+  box-shadow: 0 0 3rem rgba(50, 205, 50, .8);
 }
 .glowing_effect{
   /* animation:'200ms linear infinite';

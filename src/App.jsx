@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-black text-white flex items-center justify-center">
       <div className="w-2/3 h-full flex flex-col gap-14">
-        <div className="py-12 px-2 h-20 w-full glowing_effect shadow-show relative rounded-md">
+        <div className="py-12 px-2 h-20 w-full  shadow-show relative rounded-md">
           <ColoredBox
             rollClicked={rollClicked}
             inputs={inputs}

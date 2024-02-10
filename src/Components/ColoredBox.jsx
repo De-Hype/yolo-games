@@ -30,41 +30,48 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
       ShowedValue = value;
     }
   }
-  const customStyles = {
+  const customStylesOne = {
     width: `${ShowedValue}%`,
   };
+  const customStylesTwo={
+    width:`calc(100% - ${ShowedValue}% )`,
+  }
+  
   const inputStyles = {
     width: `100%`,
     cursor: `grab`,
   };
-  let slidingValue = ShowedValue -3;
+  let slidingValue = ShowedValue - 3;
   const movingStyles = {
-    right: `-${slidingValue}% `,
-    left: `${slidingValue}%`,
-    top: `-36px`,
+    right: `-${ShowedValue}% `,
+   left: `${ShowedValue}%`,
+     top: `-36px`,
   };
-  const RoundedStyles ={
-    right: `-${slidingValue}%`,
-    left: `${slidingValue}%`,
-  }
+  const RoundedStyles = {
+    right: `calc(98% - ${ShowedValue}% )`,
+    
+  };
 
   return (
     <div className=" ">
       <div className="absolute right-0  left-0 px-2">
-        <div className="relative ">
+        <div className="relative  ">
           <h3
             style={movingStyles}
-            className={` z font-bold w-7 red  text-white overflow-x-hidden absolute  mb-3   ${
+            className={` z font-bold w-7 bg-transparent red  text-white overflow-x-hidden absolute  mb-3   ${
               value <= 0 || undefined || NaN ? "invisible" : "visible"
             }`}
           >
             {ShowedValue}
           </h3>
-          <div style={RoundedStyles} className="absolute bg-white h-7 w-7  bottom-5 rounded-full"></div>
-          <div className="glowing_effect">
+          <div
+            style={RoundedStyles}
+            className="absolute bg-white h-7 top-0 w-7 z-40 bottom-5 rounded-full"
+          ></div>
+          <div className=" range relative">
             <input
               type="range"
-              className="absolute opacity-0"
+              className="absolute opacity-0 z-50"
               name=""
               onChange={(e) => onInputChange("rolloverInput", e.target.value)}
               style={inputStyles}
@@ -72,23 +79,27 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
             />
 
             <div
-              className={`w-full  h-5 ${
+            style={customStylesOne}
+              className={`red h-5 w-full ${
                 rollClicked ? "bg-red-500" : "bg-green-500"
               } `}
-            >
-              <div
-                style={customStyles}
-                className={`h-full  ${
-                  rollClicked ? "bg-green-600" : "bg-red-500"
-                } transition-all`}
-              ></div>
-            </div>
+            ></div>
+            <div
+              style={customStylesTwo}
+              className={`h-5 green w-full  ${
+                rollClicked ? "bg-green-600" : "bg-red-500"
+              } `}
+            ></div>
           </div>
+          {/* <div className="range">
+            <div className="red"></div>
+            <div className="lime"></div>
+          </div> */}
           <div className="flex items-center justify-between ">
-            <h3 className="ml-3 bg-gray-950 font-semibold">
+            <h3 className="ml-3 bg-gray-950 font-semibold pl-6">
               {rollClicked ? 0.1 : 5}
             </h3>
-            <h3 className="mr-3 bg-gray-950 font-semibold">
+            <h3 className=" bg-gray-950 font-semibold ml-11 ">
               {rollClicked ? 95 : 99.9}
             </h3>
           </div>
