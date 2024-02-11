@@ -33,10 +33,10 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
   const customStylesOne = {
     width: `${ShowedValue}%`,
   };
-  const customStylesTwo={
-    width:`calc(100% - ${ShowedValue}% )`,
-  }
-  
+  const customStylesTwo = {
+    width: `calc(100% - ${ShowedValue}% )`,
+  };
+
   const inputStyles = {
     width: `100%`,
     cursor: `grab`,
@@ -44,12 +44,11 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
   let slidingValue = ShowedValue - 3;
   const movingStyles = {
     right: `-${ShowedValue}% `,
-   left: `${ShowedValue}%`,
-     top: `-36px`,
+    left: `${ShowedValue}%`,
+    top: `-36px`,
   };
   const RoundedStyles = {
     right: `calc(98% - ${ShowedValue}% )`,
-    
   };
 
   return (
@@ -58,20 +57,20 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
         <div className="relative  ">
           <h3
             style={movingStyles}
-            className={` z font-bold w-7 bg-transparent red  text-white overflow-x-hidden absolute  mb-3   ${
+            className={` z font-bold w-7  text-white overflow-x-hidden absolute  mb-3   ${
               value <= 0 || undefined || NaN ? "invisible" : "visible"
             }`}
           >
             {ShowedValue}
           </h3>
-          <div
+          {/* <div
             style={RoundedStyles}
             className="absolute bg-white h-7 top-0 w-7 z-40 bottom-5 rounded-full"
-          ></div>
+          ></div> */}
           <div className=" range relative">
             <input
               type="range"
-              className="absolute opacity-0 z-50"
+              className="absolute opacity-0 "
               name=""
               onChange={(e) => onInputChange("rolloverInput", e.target.value)}
               style={inputStyles}
@@ -79,14 +78,14 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
             />
 
             <div
-            style={customStylesOne}
+              style={customStylesOne}
               className={`red h-5 w-full ${
                 rollClicked ? "bg-red-500" : "bg-green-500"
               } `}
             ></div>
             <div
               style={customStylesTwo}
-              className={`h-5 green w-full  ${
+              className={`h-5 red w-full  ${
                 rollClicked ? "bg-green-600" : "bg-red-500"
               } `}
             ></div>
@@ -96,10 +95,10 @@ const ColoredBox = ({ inputs, rollClicked, onInputChange }) => {
             <div className="lime"></div>
           </div> */}
           <div className="flex items-center justify-between ">
-            <h3 className="ml-3 bg-gray-950 font-semibold pl-6">
+            <h3 className="ml-3  font-semibold pl-6">
               {rollClicked ? 0.1 : 5}
             </h3>
-            <h3 className=" bg-gray-950 font-semibold ml-11 ">
+            <h3 className="  font-semibold ml-11 ">
               {rollClicked ? 95 : 99.9}
             </h3>
           </div>

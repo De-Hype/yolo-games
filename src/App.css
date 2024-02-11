@@ -1,6 +1,6 @@
- *{
+ /* *{
   background-color: black;
-} 
+}  */
 .long-input{
   min-width: 50%;
 }
@@ -14,8 +14,23 @@
 .box-width{
   width:80vw;
 }
+.outer-container{
+  height: 350px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  align-items: center;
+  justify-content: flex-end;
+  /* background-color: red; */
+  border-radius: 7px;
+  background: radial-gradient(at bottom, rgba(225, 0, 0, .6),  rgba(225, 0, 0, .5), rgba(50, 50, 57, 1.0));
+  padding-bottom: 20px;
+  border: .1px solid rgb(10, 10, 10);
+}
 .range{
- 
   height:2rem;
   /* overflow: hidden; */
   display:flex;
@@ -43,6 +58,21 @@
   0 0 40px rgb(26, 9, 9),
   0 0 60px rgb(26, 9, 9),
   0 0 80px red
+}
+.dice{
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 10px;
+  animation: dicespin 2s linear 1.4s alternate infinite;
+}
+@keyframes dicespin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 /* @keyframes animate{
   0%{

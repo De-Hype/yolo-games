@@ -27,7 +27,7 @@ const InputBar = ({onInputChange, rollClicked, handleRollClick, inputs}) => {
         <label  className="font-medium text-gray-800 "  htmlFor="">{rollClicked ? "Roll Under" :"Roll Over"}</label>
         <div className="long-input flex justify-between items-center border-2 mt-2 shadow-lg border-gray-800  ">
           <input
-            className="w-full font-semibold outline-none px-1 border-none  remove-arrow"
+            className="w-full bg-black font-semibold outline-none px-1 border-none  remove-arrow"
             type="number"
             name=""
             id=""

@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import ColoredBox from "./Components/ColoredBox";
 import InputBar from "./Components/InputBar";
+import Dice from "./Components/Dice";
 
 function App() {
   const [rollClicked, setRollClicked] = useState(false);
@@ -31,16 +32,19 @@ function App() {
     
   };
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black text-white flex items-center justify-center">
+    <div className="min-h-screen w-screen overflow-x-hidden bg-black text-white flex items-center justify-center">
       <div className="w-2/3 h-full flex flex-col gap-14">
-        <div className="py-12 px-2 h-20 w-full  shadow-show relative rounded-md">
+        <div className="outer-container">
+          <Dice/>
+        
+        <div className="py-12 px-2 h-20 w-full    shadow-show relative rounded-md">
           <ColoredBox
             rollClicked={rollClicked}
             inputs={inputs}
             onInputChange={handleInputChange}
           />
         </div>
-
+        </div>
         <InputBar
           rollClicked={rollClicked}
           inputs={inputs}
