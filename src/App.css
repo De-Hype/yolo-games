@@ -20,6 +20,7 @@
   padding-left: 30px;
   padding-right: 30px;
   display: flex;
+  position: relative;
   flex-direction: column;
   /* align-items: flex-end; */
   align-items: center;
@@ -48,23 +49,45 @@
   height: 100%;
   box-shadow: 0 0 3rem rgba(50, 205, 50, .8);
 }
-.glowing_effect{
-  /* animation:'200ms linear infinite';
-  animation-name: animate;
-  animation-duration: 3000ms; */
-  /* background-color:red; */
-  box-shadow:0 0 10px rgb(26, 9, 9), 
-  0 0 20px rgb(26, 9, 9),
-  0 0 40px rgb(26, 9, 9),
-  0 0 60px rgb(26, 9, 9),
-  0 0 80px red
+.dot-popping{
+  width: 15px;
+  height: 15px;
+  background-color: lime;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  z-index: 999999999;
+  animation: dotmove 2s cubic-bezier(0.42, 0, 0.58, 1) forwards infinite;
+}
+@keyframes dotmove {
+  0%{
+    /* transform: translateX(-50%) translateY(-50%);  */
+    transform: translateX(0);
+  }
+  40%{
+    transform: translateX(100px) ;
+  }
+  60%{
+    transform: translateX(100px) translateY(100px);
+  }
+  /* 100%{
+    transform: translateX(130px) translateY(100px);
+  } */
+
 }
 .dice{
   height: 50px;
   width: 50px;
   background-color: white;
   border-radius: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  display:grid;
+  
+}
+.roll-animation{
   animation: dicespin 2s linear 1.4s alternate infinite;
+  
 }
 @keyframes dicespin {
   from{
@@ -73,6 +96,21 @@
   to{
     transform: rotate(360deg);
   }
+}
+.dot{
+  width: 6px;
+  height: 6px;
+  background-color: purple;
+  border-radius: 50%;
+  z-index: 9999;
+  margin: 5px 3px;
+  transition: transform .5s ease-in-out;
+}
+.dot-added{
+  transform: scale(1.5);
+}
+.dot-removed{
+  transform: scale(0);
 }
 /* @keyframes animate{
   0%{
