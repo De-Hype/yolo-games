@@ -50,8 +50,8 @@
   box-shadow: 0 0 3rem rgba(50, 205, 50, .8);
 }
 .dot-popping{
-  width: 15px;
-  height: 15px;
+  width: 5px;
+  height: 5px;
   background-color: lime;
   border-radius: 50%;
   position: absolute;
