@@ -58,24 +58,32 @@
   top: 50%;
   bottom: 50%;
   z-index: 999999999;
-  animation: dotmove 2s cubic-bezier(0.42, 0, 0.58, 1) forwards infinite;
+  /* animation: dotmove 2s linear  infinite; */
 }
-@keyframes dotmove {
+/* @keyframes dotmove {
   0%{
-    /* transform: translateX(-50%) translateY(-50%);  */
-    transform: translateX(0);
-  }
-  40%{
-    transform: translateX(100px) ;
-  }
-  60%{
-    transform: translateX(100px) translateY(100px);
-  }
-  /* 100%{
-    transform: translateX(130px) translateY(100px);
-  } */
 
-}
+    top: 50%;
+  bottom: 50%;
+  right: 50%;
+
+  }
+  20%{
+    
+
+    right: 200px;
+    top: 50%;
+    bottom: 50%;
+  }
+   40%{
+    
+
+    top: 80%;
+
+  }
+
+
+} */
 .dice{
   height: 50px;
   width: 50px;
@@ -83,7 +91,7 @@
   border-radius: 10px;
   grid-template-columns: repeat(3, 1fr);
   display:grid;
-  
+  cursor: pointer;
 }
 .roll-animation{
   animation: dicespin 2s linear 1.4s alternate infinite;
