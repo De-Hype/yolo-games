@@ -1,7 +1,7 @@
 
 const Statistics = () => {
   return (
-    <div>Statistics</div>
+    <div className="mt-2">Statistics</div>
   )
 }
 
