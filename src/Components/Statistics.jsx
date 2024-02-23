@@ -1,5 +1,21 @@
+import { useEffect, useState } from "react";
 import { FaLock } from "react-icons/fa";
-const Statistics = () => {
+const Statistics = ({ data }) => {
+  const [wager, setWager] = useState("");
+  useEffect(() => {
+    if (data !== null || undefined) {
+      // setWager(data?.details);
+      let stats = data?.details[0];
+      console.log(stats);
+
+      const wagerMoney = stats?.diceOutcomes.wager /1000
+      console.log(wagerMoney);
+    } else {
+      setWager("-");
+      console.log("Its null");
+    }
+  }, [data]);
+
   return (
     <div className="mt-2 green px-3 py-6 rounded">
       <h3 className="text-white font-semibold pb-5 text-lg">Statistics</h3>
@@ -36,7 +52,7 @@ const Statistics = () => {
           <h3 className="">Favourite Game</h3>
           <p className="flex items-center">
             <span>
-              <FaLock className="text-red-500"/>
+              <FaLock className="text-red-500" />
             </span>
             <span>Plinko</span>
           </p>
