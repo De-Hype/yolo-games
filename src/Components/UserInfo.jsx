@@ -5,7 +5,7 @@ const UserInfo = ({data}) => {
   useEffect(() => {
     if (data !== null || undefined){
       setAddress(data?.playersAddress);
-     console.log(data)
+    
     } 
     else{
       setAddress("-");

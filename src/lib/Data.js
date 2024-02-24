@@ -21,7 +21,7 @@ const PlayersDetails = [
         "coinFlipOutcomes": {
           "id": "0x001b212165793786ebcdfcbbbb2b42e06b3ad74ee6455123ccc008d915b22e67-0",
           "playerAddress": "0xb3757a0808dc4b4ae05386245d058ff6cfe1ce31",
-          "wager": "1000000000000000000000",
+          "wager": 1000000000000000000000,
           "createdAt": "1708087462",
           "tokenAddress": "0xa254c004a83b66b49cb617b7050a3f61be352772",
           "payouts": "1980000000000000000000",
