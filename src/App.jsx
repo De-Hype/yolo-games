@@ -1,38 +1,60 @@
-import Search from "./Components/Search";
-import Statistics from "./Components/Statistics";
-import UserInfo from "./Components/UserInfo";
+import { useState } from "react";
 import "./App.css";
-import { useEffect, useState } from "react";
-import PlayersDetails from "./lib/Data";
+import PrizeDropDown from "./Components/PrizeDropDown";
+import Box from "./Layout/Box";
+import LotteryHeader from "./Layout/LotteryHeader";
+import { DailyDrawProp, WeeklyDrawProp } from "./lib/DrawPropData";
+import EntriesDropDown from "./Components/EntriesDropDown";
+import LotterHistory from "./Layout/LotterHistory";
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [data, setData] = useState(null);
-
-  const handleInputChange = (e) => {
-    setSearchTerm(e.target.value);
+  const [showPrizeDropdown, setShowPrizeDropdown] = useState(false);
+  const [showEntriesDropdown, setShowEntriesDropdown] = useState(false);
+  const handlePrizeDropDown = () => {
+    setShowPrizeDropdown(!showPrizeDropdown);
   };
-
-  const FilterFunction = (searchTerm) => {
-    return PlayersDetails.filter(
-      (value) => value.playersAddress === searchTerm
-    );
+  const handleEntriesDropDown = () => {
+    setShowEntriesDropdown(!showEntriesDropdown);
   };
-  const handleSubmitForm = (e) => {
-    e.preventDefault();
-
-    setData(FilterFunction(searchTerm)[0]);
-    
-  };
-
   return (
-    <div className="bg-stone-800 min-h-screen px-2 pt-2">
-      <Search
-        handleInputChange={handleInputChange}
-        handleSubmitForm={handleSubmitForm}
-      />
-      <UserInfo data={data} />
-      <Statistics data={data} />
+    <div
+      className={`relative min-h-screen px-2 pt-2 w-full bg-slate-800 ${
+        showPrizeDropdown || showEntriesDropdown
+          ? "overflow-y-hidden h-screen"
+          : ""
+      } `}
+    >
+      <div
+        className={`mx-auto w-3/4 pt-16 ${
+          showPrizeDropdown || showEntriesDropdown
+            ? "blur -z-50 overflow-hidden "
+            : ""
+        }`}
+      >
+        <LotteryHeader />
+        <Box
+          handlePrizeDropDown={handlePrizeDropDown}
+          showPrizeDropdown={showPrizeDropdown}
+          handleEntriesDropDown={handleEntriesDropDown}
+          showEntriesDropdown={showEntriesDropdown}
+          prop={DailyDrawProp}
+        />
+        <Box
+          handlePrizeDropDown={handlePrizeDropDown}
+          showPrizeDropdown={showPrizeDropdown}
+          handleEntriesDropDown={handleEntriesDropDown}
+          showEntriesDropdown={showEntriesDropdown}
+          prop={WeeklyDrawProp}
+        />
+        <LotterHistory />
+        {/* <PrizeDropDown /> */}
+      </div>
+      {showPrizeDropdown && (
+        <PrizeDropDown handlePrizeDropDown={handlePrizeDropDown} />
+      )}
+      {showEntriesDropdown && (
+        <EntriesDropDown handleEntriesDropDown={handleEntriesDropDown} />
+      )}
     </div>
   );
 };
