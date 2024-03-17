@@ -46,12 +46,12 @@ const Box = ({
         >
           {prop?.textHeading}
         </h4>
-        <div className="text-white bg-black flex items-center   p-1 rounded-lg">
+        <div className="text-white bg-black flex items-center gap-2 py-1 px-2 rounded-lg">
           <h4 className="">
-            11 <span>h</span>
+            11 <span className="text-sm text-slate-500">h</span>
           </h4>
           <h4 className="">
-            02 <span>m</span>
+            02 <span className="text-sm text-slate-500">m</span>
           </h4>
         </div>
       </div>

@@ -6,6 +6,7 @@ import LotteryHeader from "./Layout/LotteryHeader";
 import { DailyDrawProp, WeeklyDrawProp } from "./lib/DrawPropData";
 import EntriesDropDown from "./Components/EntriesDropDown";
 import LotterHistory from "./Layout/LotterHistory";
+import LotteryTickets from "./Layout/LotteryTickets";
 
 const App = () => {
   const [showPrizeDropdown, setShowPrizeDropdown] = useState(false);
@@ -46,8 +47,8 @@ const App = () => {
           showEntriesDropdown={showEntriesDropdown}
           prop={WeeklyDrawProp}
         />
+        <LotteryTickets />
         <LotterHistory />
-        {/* <PrizeDropDown /> */}
       </div>
       {showPrizeDropdown && (
         <PrizeDropDown handlePrizeDropDown={handlePrizeDropDown} />
