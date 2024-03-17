@@ -5,7 +5,7 @@ import { FaEthereum } from "react-icons/fa";
 const PrizeDropDown = ({ handlePrizeDropDown }) => {
   console.log("Love");
   return (
-    <div className="absolute flex items-center overflow-y-hidden justify-center mx-auto w-1/2 px-4 py-2 z-50 h-full top-0 right-0 left-0 bottom-0">
+    <div className="absolute flex items-center overflow-y-hidden justify-center mx-auto w-1/2  lg:w-full md:mx-0 md:px-1 px-4 py-2 z-50 h-full top-0 right-0 left-0 bottom-0">
       <div className="bg-slate-800 h-5/6 px-5  py-3 rounded-lg ">
         <div className="flex sticky  items-center justify-between">
           <h3 className="text-white font-bold">Prizes</h3>

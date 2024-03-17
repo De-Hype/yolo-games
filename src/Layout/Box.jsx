@@ -82,7 +82,7 @@ const Box = ({
       </div>
 
       <div
-        className={` gap-2 h-full transition-all ${show ? "flex" : "hidden"}`}
+        className={` gap-2 h-full transition-all ${show ? "flex md:flex-col md:w-full" : "hidden"}`}
       >
         <EnterDraw
           handleEntriesDropDown={handleEntriesDropDown}

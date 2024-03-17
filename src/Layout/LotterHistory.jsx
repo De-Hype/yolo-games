@@ -22,7 +22,7 @@ const LotterHistory = () => {
   };
   return (
     <div className="py-5 mt-3">
-      <div className="flex items-center gap-3 text-white mb-3">
+      <div className="flex items-center md:flex-col md:items-start gap-3 text-white mb-3">
         <h3 className=" text-2xl font-bold leading-9">Lottery History</h3>
         <div className="flex items-center border   rounded-md text-sm ">
           <span

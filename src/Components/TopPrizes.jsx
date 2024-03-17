@@ -6,7 +6,7 @@ import PrizeDropDown from "./PrizeDropDown";
 const TopPrizes = ({handlePrizeDropDown}) => {
     
   return (
-    <div className="w-1/2 relative flex flex-col gap-2 px-3 py-2 h-full border rounded-md border-slate-700">
+    <div className="w-1/2 md:w-full relative flex flex-col gap-2 px-3 py-2 h-full border rounded-md border-slate-700">
       <div className="flex justify-between items-center">
         <p className="text-slate-400 text-sm">Top Prizes</p>
         {/* <div className="bg-white h-16 w-16 right-0 top-0 absolute"></div> */}
