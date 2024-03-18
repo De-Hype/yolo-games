@@ -53,11 +53,11 @@ const LotterHistory = () => {
       </div>
       <div
         id=""
-        className=" border glass rounded-md py-2 px-1  border-slate-400"
+        className=" border sm:overflow-x-visible  glass rounded-md py-2 px-1  border-slate-400"
       >
         <div
           id="bottom-border"
-          className="flex  items-center justify-between  py-2 px-2"
+          className="flex   items-center justify-between  py-2 px-2"
         >
           <p className="text-slate-400 text-sm">#</p>
           <p className="text-slate-400 text-sm">Prize Pool</p>

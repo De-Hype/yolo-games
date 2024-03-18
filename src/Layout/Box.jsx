@@ -10,7 +10,7 @@ const Box = ({
   handleEntriesDropDown,
   showEntriesDropdown,
 }) => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   let [convertAmountInDollars, setConvertAmountInDollars] = useState(
     prop.amountInDollars
   );
