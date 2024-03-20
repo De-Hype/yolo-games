@@ -37,7 +37,7 @@ const Box = ({
   }, []);
 
   return (
-    <div className="flex relative flex-col gap-3 mt-4 glass-background px-3 py-2 rounded-md">
+    <div className="flex relative flex-col gap-3 mt-4 bg-indigo-900 px-3 py-2 rounded-md">
       <div className="flex items-center justify-between">
         <h4
           className={` font-bold ${
