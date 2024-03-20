@@ -19,7 +19,7 @@ const App = () => {
   };
   return (
     <div
-      className={`relative min-h-screen px-2 pt-2 w-full text-white bg-indigo-900 md:px-1 ${
+      className={`relative min-h-screen px-2 pt-2 w-full text-white bg-slate-900 md:px-1 ${
         showPrizeDropdown || showEntriesDropdown
           ? "overflow-y-hidden h-screen"
           : ""
