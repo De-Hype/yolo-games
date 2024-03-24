@@ -27,7 +27,7 @@ const LotterHistory = () => {
         <div className="flex items-center border   rounded-md text-sm ">
           <span
             onClick={handleHistorySectionAll}
-            className={`border-r cursor-pointer py-1 px-3 font-semibold  ${
+            className={`border-r cursor-pointer py-2 px-4 font-semibold  ${
               historyClickedAll ? "glass text-lime-500" : ""
             }`}
           >
@@ -35,7 +35,7 @@ const LotterHistory = () => {
           </span>
           <span
             onClick={handleHistorySectionDaily}
-            className={`border-r cursor-pointer py-1 px-2 font-semibold  ${
+            className={`border-r cursor-pointer py-2 px-4 font-semibold  ${
               historyClickedDaily ? "glass  text-lime-500" : ""
             }`}
           >
@@ -43,7 +43,7 @@ const LotterHistory = () => {
           </span>
           <span
           onClick={handleHistorySectionWeekly}
-            className={` cursor-pointer py-1 px-2  font-semibold ${
+            className={` cursor-pointer py-2 px-4  font-semibold ${
               historyClickedWeekly ? "glass text-lime-500" : ""
             }`}
           >

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import EnterDraw from "../Components/EnterDraw";
 import TopPrizes from "../Components/TopPrizes";
 import react from "../assets/react.svg";
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 const Box = ({
   prop,
   handlePrizeDropDown,
@@ -37,7 +37,7 @@ const Box = ({
   }, []);
 
   return (
-    <div className="flex relative flex-col gap-3 mt-4 glass-background px-3 py-2 rounded-md">
+    <div className="flex relative flex-col gap-3 mt-4 bg-indigo-900 px-3 py-2 rounded-md">
       <div className="flex items-center justify-between">
         <h4
           className={` font-bold ${
@@ -77,7 +77,11 @@ const Box = ({
           </div>
         </div>
         <div className="px-4 py-4 rounded-xl  glass-background ">
-          <FaAngleUp className="text-slate-300 font-bold" />
+          {
+            show ? 
+            <FaAngleUp className="text-slate-300 font-bold" />:
+            <FaAngleDown className="text-slate-300 font-bold" />
+          }
         </div>
       </div>
 
