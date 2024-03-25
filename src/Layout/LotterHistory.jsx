@@ -83,7 +83,7 @@ const LotterHistory = () => {
 
            
             <div className="flex w-full pl-6  items-center justify-between">
-            <p className="text-white text-right bg-red-300 flex items-center   text-sm">
+            <p className="text-white text-right flex items-center   text-sm">
 
               {value.prize}
               <span className="bg-white px-1 py-1 rounded-full">
